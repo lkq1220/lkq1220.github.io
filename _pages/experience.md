@@ -9,8 +9,8 @@ sidebar: true
 - Reviewer for NPJ Wireless Technology; IEEE TMC; IEEE IoTJ; IEEE CM; IEEE WCL; IEEE CL; IEEE JRFI; China Communications; Elsevier IoT; AdHoc; CN; TUST. etc.
  
 # 🏫 Academic Positions
-- **Mar. 2025 - Present**: Postdoctoral Research Fellow, King Abdullah University of Science and Technology (KAUST), Thuwal, Makkah, Saudi Arabia.
-- **Jul. 2024 - Jan. 2025**: Remote Researcher, King Abdullah University of Science and Technology (KAUST), Thuwal, Makkah, Saudi Arabia.
+- **Mar. 2025 - Present**: Postdoctoral Research Fellow, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia.
+- **Jul. 2024 - Jan. 2025**: Remote Researcher, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia.
 
 # 👩‍🎓 Education
 - **Sep. 2018 - Mar. 2024**: Ph.D. in Surveying and Mapping, Tongji University, Shanghai, China.
