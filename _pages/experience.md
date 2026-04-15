@@ -14,7 +14,7 @@ sidebar: true
 
 # 👩‍🎓 Education
 - **Sep. 2018 - Mar. 2024**: Ph.D. in Surveying and Mapping, Tongji University, Shanghai, China.
-    <a href="/RangLiu_PhD_Dissertation.pdf"> Download Ph.D. Dissertation </a>
+- **Nov. 2021 - Oct. 2023**: Visiting Ph.D. Student in Center for Wireless Communications, University of Oulu, Oulu, Finland.
 - **Sep. 2014 - Jun. 2018**: B.Eng. in Electronic and Information Engineering, Fujian Agriculture and Forestry University, Fuzhou, China.
 
 
