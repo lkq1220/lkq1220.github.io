@@ -6,7 +6,7 @@ permalink: /experience/
 sidebar: true
 ---
 
-# 🌍 Service \& Outreach
+# 🌍 Service & Outreach
 
 * Reviewer for NPJ Wireless Technology, IEEE TMC, IEEE IoTJ, IEEE CM, IEEE WCL, IEEE CL, IEEE JRFI, China Communications, Elsevier IoT, AdHoc, CN, TUST, etc.
 
