@@ -77,7 +77,7 @@ sidebar: true
 
 1. W. He, T. Hao\*, H. Ke, and **Kaiqiang Lin**, "[VMD Analysis of RF-Tagged Buried Pipes for GPR Applications](https://ieeexplore.ieee.org/document/9038427)," *2019 IEEE Asia-Pacific Microwave Conference (APMC)*, Singapore, 2019, pp. 560–562.
 
- # 📌 Patent  {#Patent}
+# 📌 Patent  {#Patent}
 1. **Kaiqiang Lin** and T. Hao, “Throughput Optimization Method for Underground Wireless Energy Supply Sensor Network,” Chinese Patent No. ZL20210935556.X, granted Apr. 7, 2023.
 
 1. T. Hao and **Kaiqiang Lin**, “Underground Wireless Sensor Network Node Energy Consumption Optimization Method Based on LoRa,” Chinese Patent No. ZL202011292033.X, granted Nov. 9, 2021.
