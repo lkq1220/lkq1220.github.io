@@ -46,7 +46,7 @@ sidebar: true
 
 # 🤝 Journals (Co-author)  {#journal-coauthor}
 
-1. Z. Zhang, **Kaiqiang Lin**, Y. Zhou, and T. Hao\*, "Achieving Sustainable Connectivity in RIS-Aided Wireless-Powered Underground Sensor Networks via Reinforcement Learning," submitted to *IEEE Internet of Things Journal*.
+1. Z. Zhang, **Kaiqiang Lin**, Y. Zhou, and T. Hao\*, "Achieving Sustainable Connectivity in RIS-Aided Wireless-Powered Underground Sensor Networks via Reinforcement Learning," submitted.
 
 1. Z. Zhang, **Kaiqiang Lin**, and T. Hao\*, "[Multi-UAV-Assisted Cooperative Localization of Underground Sensor Nodes Using Multi-Objective Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/11357556/)," *IEEE Internet of Things Journal*, vol. 13, no. 7, pp. 13527-13545, 2026.
 
