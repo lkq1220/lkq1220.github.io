@@ -1,17 +1,16 @@
-# Welcome to Jekyll!
-#
+
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Rang Liu"
-description              : "Humboldt Postdoctoral Research Fellow"
-repository               : "RangLiu0706/RangLiu0706.github.io"
+title                    : "Kaiqiang Lin"
+description              : "Postdoctoral Research Fellow"
+repository               : "lkq1220/lkq1220@github.io"
 
 # google analytics
-google_analytics_id      :  324368529 # get google_analytics_id from https://analytics.google.com/analytics/
+google_analytics_id      :  14376157887 # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related (uncomment and fill in when needed)
 # google_site_verification :
@@ -20,14 +19,14 @@ google_analytics_id      :  324368529 # get google_analytics_id from https://ana
 
 # Site Author
 author:
-  name             : "Rang Liu"
-  avatar           : "images/Rang.jpg"
-  bio              : "Institute for Digital Communications, FAU"
-  location         : "Erlangen, Germany"
-  employer         : "FAU"
-  googlescholar    : "https://scholar.google.com/citations?user=YVZWuQcAAAAJ&hl=en"
-  email            : "rang.liu@fau.de"
-  researchgate     : "https://www.researchgate.net/profile/Rang-Liu-3"
+  name             : "Kaiqiang Lin"
+  avatar           : "images/LKQ.jpg"
+  bio              : "Communication Theory Lab, KAUST"
+  location         : "Thuwal, Saudi Arabia"
+  employer         : "KAUST"
+  googlescholar    : "https://scholar.google.com/citations?user=g9xvPCAAAAAJ&hl=en"
+  email            : "kaiqiang.lin@kaust.edu.sa"
+  researchgate     : "https://www.researchgate.net/profile/Kaiqiang-Lin?ev=hdr_xprf"
 
 
 # Reading Files
