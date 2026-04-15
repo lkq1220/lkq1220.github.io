@@ -17,7 +17,7 @@ sidebar: true
 
 
 # 📑 Journals (Lead)  {#journal-lead}
-1. **Kaiqiang Lin** and M.-S. Alouini, "Max-Min Throughput in RSMA-Aided SWIPT for Sustainable Internet of Underground Things: A Deep Reinforcement Learning Approach," submitted.
+1. **Kaiqiang Lin**\* and M.-S. Alouini, "Max-Min Throughput in RSMA-Aided SWIPT for Sustainable Internet of Underground Things: A Deep Reinforcement Learning Approach," submitted.
 
 1. **Kaiqiang Lin**, Kangchun Zhao, and Y. Mao\*, "[Deep Reinforcement Learning-Based Cooperative Rate Splitting for Satellite-to-Underground Communication Networks](https://arxiv.org/abs/2510.25562)," *IEEE Transactions on Vehicular Technology*, minor revision.
 
