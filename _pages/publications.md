@@ -35,11 +35,11 @@ sidebar: true
 
 1. **Kaiqiang Lin**, O. L. A. López, H. Alves, and T. Hao\*, "[On CSI-Free Multi-Antenna Schemes for Massive Wireless-Powered Underground Sensor Networks](https://ieeexplore.ieee.org/document/10129159)," *IEEE Internet of Things Journal*, vol. 10, no. 19, pp. 17557-17570, 2023.
 
-1. **Kaiqiang Lin**, M. A. Ullah, H. Alves, K. Mikhaylov, and T. Hao\*, "[`Subterranean mMTC in Remote Areas: Underground-to-Satellite Connectivity Approach](https://ieeexplore.ieee.org/document/9961133)," *IEEE Communications Magazine*, vol. 61, no. 5, pp. 136-142, 2023. <a href="https://github.com/lkq1220/Subterranean-mMTC" class="pub-badge pub-code"><i class="fab fa-github"></i> Code</a> 
+1. **Kaiqiang Lin**, M. A. Ullah, H. Alves, K. Mikhaylov, and T. Hao\*, "[Subterranean mMTC in Remote Areas: Underground-to-Satellite Connectivity Approach](https://ieeexplore.ieee.org/document/9961133)," *IEEE Communications Magazine*, vol. 61, no. 5, pp. 136-142, 2023. <a href="https://github.com/lkq1220/Subterranean-mMTC" class="pub-badge pub-code"><i class="fab fa-github"></i> Code</a> 
 
 1. **Kaiqiang Lin**, O. L. A. López, H. Alves, D. Chapman, N. Metje, G. Zhao, and T. Hao\*, "[Throughput optimization in backscatter-assisted wireless-powered underground sensor networks for smart agriculture](https://www.sciencedirect.com/science/article/pii/S2542660522001184)," *Internet of Things*, vol. 20, p. 100637, 2022.
 
-1. **Kaiqiang Lin** and T. Hao, "[Experimental Link Quality Analysis for LoRa-Based Wireless Underground Sensor Networks](https://ieeexplore.ieee.org/document/9295338)," *IEEE Internet of Things Journal*,vol. 8, no. 8, pp. 6565-6577, 2021.
+1. **Kaiqiang Lin** and T. Hao\*, "[Experimental Link Quality Analysis for LoRa-Based Wireless Underground Sensor Networks](https://ieeexplore.ieee.org/document/9295338)," *IEEE Internet of Things Journal*,vol. 8, no. 8, pp. 6565-6577, 2021.
 
 1. **Kaiqiang Lin**, and T. Hao\*, "[Link Quality Analysis of Wireless Sensor Networks for Underground Infrastructure Monitoring: A Non-Backfilled Scenario](https://ieeexplore.ieee.org/document/9274410)," *IEEE Sensors Journal*, vol. 21, no. 5, pp. 7006-7014, 2021.  
 
