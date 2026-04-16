@@ -25,11 +25,11 @@ sidebar: true
 
 1. **Kaiqiang Lin**, Y. Mao\*, O. L. A. López, and M.-S. Alouini, "[UAV-Enabled Wireless-Powered Underground Communication Networks: A Novel Time Allocation Approach](https://ieeexplore.ieee.org/document/11300317)," *IEEE Transactions on Green Communications and Networking*, vol. 10, pp. 1618-1632, 2026.
 
-1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Connectivity Analysis of LoRaWAN-Based Non-Terrestrial Networks for Subterranean mMTC](https://ieeexplore.ieee.org/abstract/document/11165344)," *IEEE Internet of Things Journal*, vol. 12, no. 23, pp. 50604-50616, 2025.
+1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Connectivity Analysis of LoRaWAN-Based Non-Terrestrial Networks for Subterranean mMTC](https://ieeexplore.ieee.org/abstract/document/11165344)," *IEEE Internet of Things Journal*, vol. 12, no. 23, pp. 50604-50616, 2025. <a href="https://github.com/lkq1220/UtNTN-Simlator" class="pub-badge pub-code"><i class="fab fa-github"></i> Code</a> 
 
 1. **Kaiqiang Lin**, Y. Mao\*, "[RIS-aided Wireless-Powered Backscatter Communications for Sustainable Internet of Underground Things)](https://ieeexplore.ieee.org/abstract/document/10907817)," *IEEE Internet of Things Magazine*, vol. 8, no. 2, pp. 70-76, 2025.
 
-1. **Kaiqiang Lin**, M. A. Ullah, H. Alves, K. Mikhaylov, and T. Hao\*, "[LoRaWAN Underground-to-Satellite Connectivity for Enabling Subterranean mMTC: An Urban Underground Pipelines Monitoring Case Study](https://www.sciencedirect.com/science/article/pii/S1570870524003585)," *Ad Hoc Networks*, vol. 169, p. 103747, 2025.
+1. **Kaiqiang Lin**, M. A. Ullah, H. Alves, K. Mikhaylov, and T. Hao\*, "[LoRaWAN Underground-to-Satellite Connectivity for Enabling Subterranean mMTC: An Urban Underground Pipelines Monitoring Case Study](https://www.sciencedirect.com/science/article/pii/S1570870524003585)," *Ad Hoc Networks*, vol. 169, p. 103747, 2025. <a href="https://github.com/lkq1220/UtS-Simlator-for-pipeline-monitoring" class="pub-badge pub-code"><i class="fab fa-github"></i> Code</a> 
 
 1. **Kaiqiang Lin**, M. A. Ullah, H. Alves, K. Mikhaylov, and T. Hao\*, "[Energy Efficiency Optimization for Subterranean LoRaWAN Using A Reinforcement Learning Approach: A Direct-to-Satellite Scenario](https://ieeexplore.ieee.org/document/10297305)," *IEEE Wireless Communications Letters*, vol. 13, no. 2, pp. 308-312, 2024.
 
