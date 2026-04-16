@@ -23,7 +23,7 @@ sidebar: true
 
 1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Enabling Subterranean mMTC: Space-Air-Ground-Underground Networks Powered by LoRaWAN and Wireless Energy Transfer](https://ieeexplore.ieee.org/abstract/document/11263878/)," *IEEE Wireless Communications*, early access, 2025.
 
-1. **Kaiqiang Lin**\*, Y. Mao\*, O. L. A. López, and M.-S. Alouini, "[UAV-Enabled Wireless-Powered Underground Communication Networks: A Novel Time Allocation Approach](https://ieeexplore.ieee.org/document/11300317)," *IEEE Transactions on Green Communications and Networking*,vol. 10, pp. 1618-1632, 2026.
+1. **Kaiqiang Lin**, Y. Mao\*, O. L. A. López, and M.-S. Alouini, "[UAV-Enabled Wireless-Powered Underground Communication Networks: A Novel Time Allocation Approach](https://ieeexplore.ieee.org/document/11300317)," *IEEE Transactions on Green Communications and Networking*,vol. 10, pp. 1618-1632, 2026.
 
 1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Connectivity Analysis of LoRaWAN-Based Non-Terrestrial Networks for Subterranean mMTC](https://ieeexplore.ieee.org/abstract/document/11165344)," *IEEE Internet of Things Journal*, vol. 12, no. 23, pp. 50604-50616, 2025.
 
