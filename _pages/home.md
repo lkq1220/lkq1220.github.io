@@ -12,7 +12,7 @@ I am currently a postdoctoral research fellow with the Communication Theory Lab 
 
 Prior to this, I received my Ph.D. degree with the College of Surveying and Geo-Informatics Tongji University (Top 8 in China mainland, QS rankings 2026), Shanghai, China, in 2024, under the supervision of [Prof. Tong Hao](https://celiang.tongji.edu.cn/info/1300/2387.htm). From 2021 to 2023, I was a visiting Ph.D. student at the Center for Wireless Communications, University of Oulu, Oulu, Finland, under the supervision of [Prof. Hirley Alves](https://sites.google.com/view/hirley-alves). 
 
-My main research focuses on sustainable and massive underground infrastructure monitoring
+My main research focuses on sustainable and massive underground infrastructure monitoring.
 
 <div class="research-tags">
   <span class="research-tag">Internet of Underground Things</span>
