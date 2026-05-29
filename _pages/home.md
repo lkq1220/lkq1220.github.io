@@ -46,11 +46,11 @@ My main research focuses on sustainable and massive underground infrastructure m
 
 
 <div class="site-stats">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <span id="busuanzi_container_site_pv" class="site-stat-item">
-    Views <span id="busuanzi_value_site_pv"></span>
+  <script defer src="https://events.vercount.one/js"></script>
+  <span class="site-stat-item">
+    Views <span id="vercount_value_site_pv">...</span>
   </span>
-  <span id="busuanzi_container_site_uv" class="site-stat-item">
-    Visitors <span id="busuanzi_value_site_uv"></span>
+  <span class="site-stat-item">
+    Visitors <span id="vercount_value_site_uv">...</span>
   </span>
 </div>
