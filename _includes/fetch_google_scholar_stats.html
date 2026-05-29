@@ -80,6 +80,11 @@
       return item.querySelector('a.pub-code');
     }
 
+    function getPublicationContainer(item) {
+      var paragraphs = item.querySelectorAll('p');
+      return paragraphs.length ? paragraphs[paragraphs.length - 1] : item;
+    }
+
     function glueSpace() {
       return document.createTextNode('\u00a0');
     }
@@ -95,8 +100,9 @@
         return;
       }
 
-      item.appendChild(glueSpace());
-      item.appendChild(badge);
+      var container = getPublicationContainer(item);
+      container.appendChild(glueSpace());
+      container.appendChild(badge);
     }
 
     function ensureCitationBadges() {
@@ -125,9 +131,9 @@
             badge.textContent = 'Citations: ...';
           }
 
-          if (badge.getAttribute('data-placed') !== 'after-publication') {
+          if (badge.getAttribute('data-placed') !== 'inside-publication') {
             placeBadge(item, badge);
-            badge.setAttribute('data-placed', 'after-publication');
+            badge.setAttribute('data-placed', 'inside-publication');
           }
 
           return badge;
