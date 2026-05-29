@@ -53,4 +53,7 @@ My main research focuses on sustainable and massive underground infrastructure m
   <span class="site-stat-item">
     Visitors <span id="vercount_value_site_uv">...</span>
   </span>
+  <span class="site-stat-item">
+    Citations <span id="total_cit">...</span>
+  </span>
 </div>

@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         rerunScripts();
         // Reload visitor stats after PJAX navigation.
         reloadVercount();
+        if (window.refreshGoogleScholarStats) {
+          window.refreshGoogleScholarStats();
+        }
       })
       .catch(console.error);
   }

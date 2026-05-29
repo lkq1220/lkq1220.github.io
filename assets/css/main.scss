@@ -396,7 +396,8 @@ h1:before, .anchor:before {
 }
 
 #vercount_value_site_pv,
-#vercount_value_site_uv {
+#vercount_value_site_uv,
+#total_cit {
   color: #6f6f6f;
   font-weight: 500;
 }
@@ -439,4 +440,9 @@ h1:before, .anchor:before {
 .pub-hot {
   background: #fee2e2;
   color: #991b1b;
+}
+
+.pub-citation {
+  background: #e8f0fe;
+  color: #1a56db;
 }
