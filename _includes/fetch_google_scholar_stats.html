@@ -70,42 +70,24 @@
       referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
 
-    function placeBadgeAfterTitleLink(titleLink, badge) {
-      var space = document.createTextNode(' ');
-      insertAfter(titleLink, space);
-      insertAfter(space, badge);
+    function removeNode(node) {
+      if (node && node.parentNode) {
+        node.parentNode.removeChild(node);
+      }
     }
 
-    function placeBadgeAfterQuotedTitle(item, badge) {
-      var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT);
-      var node = walker.nextNode();
-
-      while (node) {
-        var match = node.nodeValue.match(/["\u201c].+?["\u201d]/);
-        if (match) {
-          var remainder = node.splitText(match.index + match[0].length);
-          node.parentNode.insertBefore(document.createTextNode(' '), remainder);
-          node.parentNode.insertBefore(badge, remainder);
-          return true;
-        }
-        node = walker.nextNode();
-      }
-
-      return false;
+    function getCodeBadge(item) {
+      return item.querySelector('a.pub-code');
     }
 
     function placeBadge(item, badge) {
-      if (badge.parentNode) {
-        badge.parentNode.removeChild(badge);
-      }
+      removeNode(badge);
 
-      var titleLink = getTitleLink(item);
-      if (titleLink) {
-        placeBadgeAfterTitleLink(titleLink, badge);
-        return;
-      }
-
-      if (placeBadgeAfterQuotedTitle(item, badge)) {
+      var codeBadge = getCodeBadge(item);
+      if (codeBadge) {
+        var codeSpace = document.createTextNode(' ');
+        insertAfter(codeBadge, codeSpace);
+        insertAfter(codeSpace, badge);
         return;
       }
 
@@ -122,11 +104,12 @@
         .call(document.querySelectorAll('#pjax-container ol > li'))
         .map(function (item) {
           var sectionHeading = getSectionHeading(item);
-          if (/patent/i.test(sectionHeading)) {
+          var badge = item.querySelector('.show_paper_citations');
+          if (/patent/i.test(sectionHeading) || /\bsubmitted\b/i.test(item.textContent || '')) {
+            removeNode(badge);
             return null;
           }
 
-          var badge = item.querySelector('.show_paper_citations');
           if (!badge) {
             var title = getPublicationTitle(item);
             if (!title) {
@@ -138,9 +121,9 @@
             badge.textContent = 'Citations: ...';
           }
 
-          if (badge.getAttribute('data-placed') !== 'after-title') {
+          if (badge.getAttribute('data-placed') !== 'after-publication') {
             placeBadge(item, badge);
-            badge.setAttribute('data-placed', 'after-title');
+            badge.setAttribute('data-placed', 'after-publication');
           }
 
           return badge;
