@@ -63,8 +63,6 @@ sidebar: true
 1. T. Hao\*, W. Zheng, W. Wang, Y. Zhou, J. Bai, **Kaiqiang Lin**, and Z. Yu, "[Electrically Thin Metasurface for Broadband Transmission Enhancement by Manipulating the Amplitude and Phase of the Reflection Coefficients](https://pubs.aip.org/aip/jap/article/126/2/025303/156452/Electrically-thin-metasurface-for-broadband)," *Journal of Applied Physics*, vol. 126, no. 2, p. 025303, 2019.
 
 # 🎤 Conferences  {#conferences}
-1. **Kaiqiang Lin**\* and M.-S. Alouini, "Toward Sustainable Internet of Underground Things: Integrating LoRaWAN-Based Underground-to-NTN Connectivity With Energy Harvesting," *2026 36th URSI General Assembly and Scientific Symposium*, Kraków, Poland. (**Oral presentation**)
-
 1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Toward Sustainable Internet of Underground Things: A LoRaWAN and Wireless Energy Transfer Integration Approach](https://content.ampp.org/mecc/proceedings-abstract/MECC_NOV2025/2025/1/107034)," *2025 19th Middle East Corrosion Conference and Exhibition*, Dammam, Kingdom of Saudi Arabia. (**Oral presentation**)
 
 1. **Kaiqiang Lin**, T. Hao\*, "[Adaptive Selection of Transmission Configuration for LoRa-Based Wireless Underground Sensor Networks](https://ieeexplore.ieee.org/document/9417371)," *2021 IEEE Wireless Communications and Networking Conference (WCNC)*, Nanjing, China, 2021, pp. 1–6. (**Oral presentation**)
