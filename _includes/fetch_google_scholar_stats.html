@@ -80,18 +80,22 @@
       return item.querySelector('a.pub-code');
     }
 
+    function glueSpace() {
+      return document.createTextNode('\u00a0');
+    }
+
     function placeBadge(item, badge) {
       removeNode(badge);
 
       var codeBadge = getCodeBadge(item);
       if (codeBadge) {
-        var codeSpace = document.createTextNode(' ');
+        var codeSpace = glueSpace();
         insertAfter(codeBadge, codeSpace);
         insertAfter(codeSpace, badge);
         return;
       }
 
-      item.appendChild(document.createTextNode(' '));
+      item.appendChild(glueSpace());
       item.appendChild(badge);
     }
 
