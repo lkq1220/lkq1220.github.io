@@ -443,6 +443,14 @@ h1:before, .anchor:before {
 }
 
 .pub-citation {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.15;
   background: #e8f0fe;
   color: #1a56db;
+}
+
+.pub-citation.is-unmatched {
+  background: #f3f4f6;
+  color: #6f6f6f;
 }

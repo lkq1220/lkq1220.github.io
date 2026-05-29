@@ -73,14 +73,7 @@ def main():
             author["citation_fetch_error"] = f"{type(exc).__name__}: {exc}"
             print(f"Warning: using previous citation data because fetch failed: {exc}")
         else:
-            author = {
-                "name": "Kaiqiang Lin",
-                "citedby": 0,
-                "publications": {},
-                "updated": str(datetime.utcnow()),
-                "citation_fetch_error": f"{type(exc).__name__}: {exc}",
-            }
-            print(f"Warning: writing placeholder citation data because fetch failed: {exc}")
+            raise RuntimeError("Google Scholar fetch failed and no previous citation data exists") from exc
     finally:
         if hasattr(signal, "SIGALRM"):
             signal.alarm(0)

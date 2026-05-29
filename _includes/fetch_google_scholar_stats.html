@@ -7,11 +7,31 @@
     {% endif %}
     var statsPromise = null;
 
-    function normalizeTitle(title) {
+    function cleanTitle(title) {
       return String(title || '')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/\s+/g, ' ')
+        .replace(/^[\s"'\u201c\u201d]+|[\s"'\u201c\u201d]+$/g, '')
+        .replace(/[,.，。;；:：]+$/g, '')
+        .trim();
+    }
+
+    function normalizeTitle(title) {
+      return cleanTitle(title)
         .toLowerCase()
         .replace(/&/g, 'and')
         .replace(/[^a-z0-9]/g, '');
+    }
+
+    function titleTokens(title) {
+      return cleanTitle(title)
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .split(' ')
+        .filter(function (token) {
+          return token.length > 1;
+        });
     }
 
     function getSectionHeading(item) {
@@ -26,17 +46,71 @@
       return '';
     }
 
+    function getTitleLink(item) {
+      var links = Array.prototype.slice.call(item.querySelectorAll('a[href]'));
+      return links.find(function (link) {
+        return !link.classList.contains('pub-badge') &&
+          !link.classList.contains('pub-code') &&
+          link.href.indexOf('github.com') === -1;
+      }) || null;
+    }
+
     function getPublicationTitle(item) {
-      var titleLink = item.querySelector(
-        'a[href*="ieeexplore"], a[href*="sciencedirect"], a[href*="pubs.aip"], a[href*="content.ampp"], a[href*="doi.org"], a[href*="arxiv"]'
-      );
+      var titleLink = getTitleLink(item);
       if (titleLink && titleLink.textContent.trim()) {
-        return titleLink.textContent.trim();
+        return cleanTitle(titleLink.textContent);
       }
 
       var text = item.textContent.replace(/\s+/g, ' ').trim();
-      var match = text.match(/["\u201c\u201d](.+?)["\u201c\u201d]/);
-      return match ? match[1].trim() : '';
+      var match = text.match(/["\u201c](.+?)["\u201d]/);
+      return match ? cleanTitle(match[1]) : '';
+    }
+
+    function insertAfter(referenceNode, newNode) {
+      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+
+    function placeBadgeAfterTitleLink(titleLink, badge) {
+      var space = document.createTextNode(' ');
+      insertAfter(titleLink, space);
+      insertAfter(space, badge);
+    }
+
+    function placeBadgeAfterQuotedTitle(item, badge) {
+      var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT);
+      var node = walker.nextNode();
+
+      while (node) {
+        var match = node.nodeValue.match(/["\u201c].+?["\u201d]/);
+        if (match) {
+          var remainder = node.splitText(match.index + match[0].length);
+          node.parentNode.insertBefore(document.createTextNode(' '), remainder);
+          node.parentNode.insertBefore(badge, remainder);
+          return true;
+        }
+        node = walker.nextNode();
+      }
+
+      return false;
+    }
+
+    function placeBadge(item, badge) {
+      if (badge.parentNode) {
+        badge.parentNode.removeChild(badge);
+      }
+
+      var titleLink = getTitleLink(item);
+      if (titleLink) {
+        placeBadgeAfterTitleLink(titleLink, badge);
+        return;
+      }
+
+      if (placeBadgeAfterQuotedTitle(item, badge)) {
+        return;
+      }
+
+      item.appendChild(document.createTextNode(' '));
+      item.appendChild(badge);
     }
 
     function ensureCitationBadges() {
@@ -62,77 +136,157 @@
             badge.className = 'pub-badge pub-citation show_paper_citations';
             badge.setAttribute('data-title', title);
             badge.textContent = 'Citations: ...';
-            item.appendChild(document.createTextNode(' '));
-            item.appendChild(badge);
           }
+
+          if (badge.getAttribute('data-placed') !== 'after-title') {
+            placeBadge(item, badge);
+            badge.setAttribute('data-placed', 'after-title');
+          }
+
           return badge;
         })
         .filter(Boolean);
     }
 
-    function buildTitleIndex(publications) {
-      var index = {};
-      Object.keys(publications || {}).forEach(function (paperId) {
-        var publication = publications[paperId] || {};
-        var title = publication.bib && publication.bib.title;
-        var normalizedTitle = normalizeTitle(title || publication.title);
-        if (normalizedTitle) {
-          index[normalizedTitle] = publication;
-        }
-        index[paperId] = publication;
-      });
-      return index;
+    function publicationTitles(publication) {
+      var bib = publication.bib || {};
+      return [
+        bib.title,
+        bib.citation_title,
+        publication.title,
+        publication.name
+      ].map(cleanTitle).filter(Boolean);
     }
 
-    function findPublication(element, publications, titleIndex) {
+    function buildPublicationIndex(publications) {
+      var exact = {};
+      var entries = [];
+
+      Object.keys(publications || {}).forEach(function (paperId) {
+        var publication = publications[paperId] || {};
+        exact[paperId] = publication;
+
+        publicationTitles(publication).forEach(function (title) {
+          var normalizedTitle = normalizeTitle(title);
+          if (!normalizedTitle) {
+            return;
+          }
+
+          exact[normalizedTitle] = publication;
+          entries.push({
+            publication: publication,
+            normalizedTitle: normalizedTitle,
+            tokens: titleTokens(title)
+          });
+        });
+      });
+
+      return {
+        exact: exact,
+        entries: entries
+      };
+    }
+
+    function tokenScore(leftTokens, rightTokens) {
+      if (!leftTokens.length || !rightTokens.length) {
+        return 0;
+      }
+
+      var right = {};
+      rightTokens.forEach(function (token) {
+        right[token] = true;
+      });
+
+      var shared = leftTokens.filter(function (token) {
+        return right[token];
+      }).length;
+
+      return shared / Math.max(leftTokens.length, rightTokens.length);
+    }
+
+    function findPublication(element, publications, publicationIndex) {
       var paperId = element.getAttribute('data-scholar-id') || element.getAttribute('data');
       if (paperId && publications[paperId]) {
         return publications[paperId];
       }
 
-      var normalizedTitle = normalizeTitle(element.getAttribute('data-title'));
+      var title = element.getAttribute('data-title');
+      var normalizedTitle = normalizeTitle(title);
       if (!normalizedTitle) {
         return null;
       }
-      if (titleIndex[normalizedTitle]) {
-        return titleIndex[normalizedTitle];
+      if (publicationIndex.exact[normalizedTitle]) {
+        return publicationIndex.exact[normalizedTitle];
       }
 
-      return Object.keys(titleIndex).reduce(function (match, candidateTitle) {
-        if (match || normalizedTitle.length < 20 || candidateTitle.length < 20) {
-          return match;
+      var tokens = titleTokens(title);
+      var bestMatch = null;
+      var bestScore = 0;
+
+      publicationIndex.entries.forEach(function (entry) {
+        var score = tokenScore(tokens, entry.tokens);
+        if (
+          normalizedTitle.length >= 20 &&
+          entry.normalizedTitle.length >= 20 &&
+          (entry.normalizedTitle.indexOf(normalizedTitle) !== -1 ||
+            normalizedTitle.indexOf(entry.normalizedTitle) !== -1)
+        ) {
+          score = Math.max(score, 0.95);
         }
-        if (candidateTitle.indexOf(normalizedTitle) !== -1 || normalizedTitle.indexOf(candidateTitle) !== -1) {
-          return titleIndex[candidateTitle];
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = entry.publication;
         }
-        return match;
-      }, null);
+      });
+
+      return bestScore >= 0.7 ? bestMatch : null;
     }
 
     function getCitationCount(publication) {
       if (!publication) {
-        return 0;
+        return null;
       }
+
       var count = publication.num_citations;
       if (count === undefined || count === null) {
         count = publication.citedby;
       }
-      count = Number(count || 0);
-      return Number.isFinite(count) ? count : 0;
+
+      count = Number.parseInt(count, 10);
+      return Number.isFinite(count) ? count : null;
     }
 
     function renderCitationStats(data) {
+      var publications = (data && data.publications) || {};
+      var publicationIndex = buildPublicationIndex(publications);
+      var hasPublicationData = publicationIndex.entries.length > 0;
       var totalCitation = document.getElementById('total_cit');
-      if (totalCitation && data && data.citedby !== undefined) {
-        totalCitation.textContent = data.citedby;
+
+      if (totalCitation) {
+        totalCitation.textContent =
+          data && data.citedby !== undefined && (hasPublicationData || !data.citation_fetch_error)
+            ? data.citedby
+            : '--';
       }
 
-      var publications = (data && data.publications) || {};
-      var titleIndex = buildTitleIndex(publications);
       ensureCitationBadges().forEach(function (element) {
-        var publication = findPublication(element, publications, titleIndex);
-        element.textContent = 'Citations: ' + getCitationCount(publication);
+        var publication = hasPublicationData
+          ? findPublication(element, publications, publicationIndex)
+          : null;
+        var count = getCitationCount(publication);
+
+        element.classList.remove('is-loaded', 'is-unmatched');
+        if (count === null) {
+          element.textContent = 'Citations: --';
+          element.classList.add('is-unmatched');
+          element.title = 'No matching Google Scholar record was found.';
+          return;
+        }
+
+        element.textContent = 'Citations: ' + count;
         element.classList.add('is-loaded');
+        element.removeAttribute('title');
       });
     }
 
@@ -150,6 +304,7 @@
           .catch(function (error) {
             console.warn(error);
             statsPromise = null;
+            renderCitationStats(null);
             return null;
           });
       }
