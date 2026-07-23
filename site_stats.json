@@ -4,15 +4,15 @@
   "provider": "vercount",
   "views": 279,
   "visitors": 76,
-  "source_views": 279,
-  "source_visitors": 76,
+  "source_views": 262,
+  "source_visitors": 72,
   "source_metrics": {
     "views": "page_pv",
     "visitors": "site_uv"
   },
   "guarded": {
-    "views": false,
-    "visitors": false
+    "views": true,
+    "visitors": true
   },
-  "updated_at": "2026-07-23T18:37:19Z"
+  "updated_at": "2026-07-23T20:19:49Z"
 }
