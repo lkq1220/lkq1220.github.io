@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Reload the visitor counter after PJAX swaps page content.
   function reloadVercount() {
     // Skip pages without the visitor counter.
-    if (!document.getElementById('vercount_value_site_pv')) return;
+    if (!document.getElementById('site_stat_views')) return;
 
     // Remove old counter scripts before loading a fresh one.
     document.querySelectorAll('script[src*="events.vercount.one"]').forEach(function(s) {
@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         rerunScripts();
         // Reload visitor stats after PJAX navigation.
         reloadVercount();
+        if (window.refreshSiteStats) {
+          window.refreshSiteStats();
+        }
         if (window.refreshGoogleScholarStats) {
           window.refreshGoogleScholarStats();
         }

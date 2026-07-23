@@ -1,0 +1,76 @@
+name: Update Site Stats
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Prepare snapshot branch
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/site-stats"
+          publish_dir="$RUNNER_TEMP/site-stats-publish"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          if git ls-remote --exit-code --heads origin site-stats > /dev/null 2>&1; then
+            git fetch origin site-stats:site-stats
+            git checkout site-stats
+            test -f site_stats.json
+          else
+            remote_status=$?
+            if [ "$remote_status" -ne 2 ]; then
+              echo "Could not determine whether the site-stats branch exists." >&2
+              exit "$remote_status"
+            fi
+            git checkout --orphan site-stats
+            cp "$GITHUB_WORKSPACE/_data/site_stats.json" site_stats.json
+          fi
+
+          cp site_stats.json "$RUNNER_TEMP/site-stats/previous.json"
+
+      - name: Read and guard counters
+        run: >-
+          python .github/scripts/update_site_stats.py
+          --previous "${{ runner.temp }}/site-stats/previous.json"
+          --output "${{ runner.temp }}/site-stats/site_stats.json"
+
+      - name: Publish snapshot
+        shell: bash
+        run: |
+          publish_dir="$RUNNER_TEMP/site-stats-publish"
+          cd "$publish_dir"
+
+          cp "$RUNNER_TEMP/site-stats/site_stats.json" site_stats.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site_stats.json
+
+          if git diff --cached --quiet; then
+            echo "Site statistics are unchanged."
+            exit 0
+          fi
+
+          git commit -m "Update site statistics"
+          git push origin HEAD:site-stats

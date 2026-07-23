@@ -47,13 +47,45 @@ My main research focuses on sustainable and massive underground infrastructure m
 
 <div class="site-stats">
   <script defer src="https://events.vercount.one/js"></script>
-  <span class="site-stat-item">
-    Views <span id="vercount_value_site_pv">...</span>
+  <span hidden aria-hidden="true">
+    <span id="vercount_value_page_pv"></span>
+    <span id="vercount_value_site_uv"></span>
   </span>
   <span class="site-stat-item">
-    Visitors <span id="vercount_value_site_uv">...</span>
+    Views <span
+      id="site_stat_views"
+      data-floor="{{ site.data.site_stats.views }}"
+      aria-live="polite"
+    >{{ site.data.site_stats.views }}</span>
+  </span>
+  <span class="site-stat-item">
+    Visitors <span
+      id="site_stat_visitors"
+      data-floor="{{ site.data.site_stats.visitors }}"
+      aria-live="polite"
+    >{{ site.data.site_stats.visitors }}</span>
   </span>
   <span class="site-stat-item">
     Citations <span id="total_cit">...</span>
   </span>
+  <script>
+    (function () {
+      try {
+        var stored = JSON.parse(localStorage.getItem('lkq_site_stats_v1') || '{}');
+        [
+          ['site_stat_views', 'views'],
+          ['site_stat_visitors', 'visitors']
+        ].forEach(function (counter) {
+          var node = document.getElementById(counter[0]);
+          var floor = Number(node.textContent);
+          var saved = Number(stored[counter[1]]);
+          if (Number.isSafeInteger(saved) && saved > floor) {
+            node.textContent = String(saved);
+          }
+        });
+      } catch (error) {
+        // The published floor remains visible when storage is unavailable.
+      }
+    })();
+  </script>
 </div>
