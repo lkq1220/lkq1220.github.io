@@ -4,7 +4,7 @@
   "provider": "vercount",
   "views": 279,
   "visitors": 76,
-  "source_views": 269,
+  "source_views": 270,
   "source_visitors": 75,
   "source_metrics": {
     "views": "page_pv",
@@ -14,5 +14,5 @@
     "views": true,
     "visitors": true
   },
-  "updated_at": "2026-07-25T14:00:42Z"
+  "updated_at": "2026-07-26T11:36:05Z"
 }
