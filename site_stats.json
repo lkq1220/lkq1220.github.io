@@ -3,16 +3,16 @@
   "site": "lkq1220.github.io",
   "provider": "vercount",
   "views": 279,
-  "visitors": 79,
-  "source_views": 277,
-  "source_visitors": 79,
+  "visitors": 80,
+  "source_views": 279,
+  "source_visitors": 80,
   "source_metrics": {
     "views": "page_pv",
     "visitors": "site_uv"
   },
   "guarded": {
-    "views": true,
+    "views": false,
     "visitors": false
   },
-  "updated_at": "2026-07-27T15:12:16Z"
+  "updated_at": "2026-07-27T17:06:56Z"
 }
