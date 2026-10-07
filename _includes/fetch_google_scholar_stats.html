@@ -261,6 +261,12 @@
           data && data.citedby !== undefined && (hasPublicationData || !data.citation_fetch_error)
             ? data.citedby
             : '--';
+        if (data && data.citation_fetch_error) {
+          totalCitation.title = 'Google Scholar could not be refreshed. Last successful update: ' +
+            (data.updated || 'unknown') + ' UTC.';
+        } else {
+          totalCitation.removeAttribute('title');
+        }
       }
 
       ensureCitationBadges().forEach(function (element) {

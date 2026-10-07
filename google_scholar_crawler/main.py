@@ -4,9 +4,6 @@ import os
 import signal
 from pathlib import Path
 
-from scholarly import scholarly
-
-
 SCHOLAR_ID = os.environ.get("GOOGLE_SCHOLAR_ID", "g9xvPCAAAAAJ").strip()
 TIMEOUT_SECONDS = int(os.environ.get("SCHOLARLY_TIMEOUT_SECONDS", "240"))
 RESULTS_DIR = Path(__file__).resolve().parent / "results"
@@ -30,11 +27,17 @@ def _load_existing_data():
 
 
 def _fetch_author_data():
+    # Import inside the guarded fetch so dependency failures preserve the snapshot.
+    from scholarly import scholarly
+
     if not SCHOLAR_ID:
         raise RuntimeError("GOOGLE_SCHOLAR_ID is empty")
 
     author = scholarly.search_author_id(SCHOLAR_ID)
     author = scholarly.fill(author, sections=["basics", "indices", "counts", "publications"])
+    citedby = author.get("citedby")
+    if isinstance(citedby, bool) or not isinstance(citedby, int) or citedby < 0:
+        raise RuntimeError("Google Scholar response is missing a valid citation total")
     author["updated"] = str(datetime.utcnow())
     author["publications"] = {
         publication["author_pub_id"]: publication
@@ -80,6 +83,8 @@ def main():
 
     print(json.dumps(author, indent=2, ensure_ascii=False))
     _write_results(author)
+    if author.get("citation_fetch_error"):
+        print(f"::warning::Citation data was not refreshed: {author['citation_fetch_error']}")
 
 
 if __name__ == "__main__":

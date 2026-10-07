@@ -40,6 +40,9 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install -r google_scholar_crawler/requirements.txt
 
+      - name: Verify citation crawler
+        run: python -B -m unittest discover -s google_scholar_crawler -p test_main.py -v
+
       - name: Fetch citation data
         run: python google_scholar_crawler/main.py
 
