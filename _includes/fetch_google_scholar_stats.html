@@ -5,7 +5,18 @@
     {% else %}
     var gsDataUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json';
     {% endif %}
+    var publishedStats = {{ site.data.google_scholar_stats | jsonify }};
     var statsPromise = null;
+    var statsFetchedAt = 0;
+
+    function latestSnapshot(remote) {
+      if (!publishedStats) return remote;
+      if (!remote) return publishedStats;
+      function updatedAt(data) {
+        return Date.parse(String(data.updated || '').replace(' ', 'T').replace(/Z$/, '') + 'Z') || 0;
+      }
+      return updatedAt(remote) >= updatedAt(publishedStats) ? remote : publishedStats;
+    }
 
     function cleanTitle(title) {
       return String(title || '')
@@ -292,7 +303,12 @@
     window.refreshGoogleScholarStats = function () {
       ensureCitationBadges();
 
+      if (Date.now() - statsFetchedAt > 5 * 60 * 1000) {
+        statsPromise = null;
+      }
       if (!statsPromise) {
+        renderCitationStats(publishedStats);
+        statsFetchedAt = Date.now();
         statsPromise = fetch(gsDataUrl, { cache: 'no-store' })
           .then(function (response) {
             if (!response.ok) {
@@ -300,11 +316,12 @@
             }
             return response.json();
           })
+          .then(latestSnapshot)
           .catch(function (error) {
             console.warn(error);
             statsPromise = null;
-            renderCitationStats(null);
-            return null;
+            renderCitationStats(publishedStats);
+            return publishedStats;
           });
       }
 

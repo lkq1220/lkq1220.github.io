@@ -1,0 +1,283 @@
+{
+  "scholar_id": "g9xvPCAAAAAJ",
+  "name": "Kaiqiang Lin",
+  "citedby": 495,
+  "citedby5y": 484,
+  "hindex": 13,
+  "hindex5y": 13,
+  "i10index": 15,
+  "i10index5y": 15,
+  "publications": {
+    "g9xvPCAAAAAJ:Y0pCki6q_DkC": {
+      "author_pub_id": "g9xvPCAAAAAJ:Y0pCki6q_DkC",
+      "bib": {
+        "title": "Experimental link quality analysis for LoRa-based wireless underground sensor networks",
+        "author": "K Lin, T Hao",
+        "citation": "IEEE Internet of Things Journal 8 (8), 6565-6577 , 2020",
+        "pub_year": "2020"
+      },
+      "num_citations": 100
+    },
+    "g9xvPCAAAAAJ:_FxGoFyzp5QC": {
+      "author_pub_id": "g9xvPCAAAAAJ:_FxGoFyzp5QC",
+      "bib": {
+        "title": "Optimizing energy efficiency of LoRaWAN-based wireless underground sensor networks: A multi-agent reinforcement learning approach",
+        "author": "G Zhao, K Lin, D Chapman, N Metje, T Hao",
+        "citation": "Internet of Things 22, 100776 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 50
+    },
+    "g9xvPCAAAAAJ:UeHWp8X0CEIC": {
+      "author_pub_id": "g9xvPCAAAAAJ:UeHWp8X0CEIC",
+      "bib": {
+        "title": "Air-ground impedance matching by depositing metasurfaces for enhanced GPR detection",
+        "author": "T Hao, W Zheng, W He, K Lin",
+        "citation": "IEEE Transactions on Geoscience and Remote Sensing 58 (6), 4061-4075 , 2020",
+        "pub_year": "2020"
+      },
+      "num_citations": 42
+    },
+    "g9xvPCAAAAAJ:zYLM7Y9cAGgC": {
+      "author_pub_id": "g9xvPCAAAAAJ:zYLM7Y9cAGgC",
+      "bib": {
+        "title": "Joint time-frequency analysis of ground penetrating radar data based on variational mode decomposition",
+        "author": "W He, T Hao, H Ke, W Zheng, K Lin",
+        "citation": "Journal of Applied Geophysics 181, 104146 , 2020",
+        "pub_year": "2020"
+      },
+      "num_citations": 39
+    },
+    "g9xvPCAAAAAJ:ufrVoPGSRksC": {
+      "author_pub_id": "g9xvPCAAAAAJ:ufrVoPGSRksC",
+      "bib": {
+        "title": "Subterranean mMTC in remote areas: Underground-to-satellite connectivity approach",
+        "author": "K Lin, MA Ullah, H Alves, K Mikhaylov, T Hao",
+        "citation": "IEEE Communications Magazine 61 (5), 136-142 , 2022",
+        "pub_year": "2022"
+      },
+      "num_citations": 33
+    },
+    "g9xvPCAAAAAJ:WF5omc3nYNoC": {
+      "author_pub_id": "g9xvPCAAAAAJ:WF5omc3nYNoC",
+      "bib": {
+        "title": "Throughput optimization in backscatter-assisted wireless-powered underground sensor networks for smart agriculture",
+        "author": "K Lin, OLA Lopez, H Alves, D Chapman, N Metje, G Zhao, T Hao",
+        "citation": "Internet of Things 20, 100637 , 2022",
+        "pub_year": "2022"
+      },
+      "num_citations": 28
+    },
+    "g9xvPCAAAAAJ:IjCSPb-OGe4C": {
+      "author_pub_id": "g9xvPCAAAAAJ:IjCSPb-OGe4C",
+      "bib": {
+        "title": "Analysis of LoRa link quality for underwater wireless sensor networks: A semi-empirical study",
+        "author": "K Lin, T Hao, W Zheng, W He",
+        "citation": "2019 IEEE Asia-Pacific Microwave Conference (APMC), 120-122 , 2019",
+        "pub_year": "2019"
+      },
+      "num_citations": 25
+    },
+    "g9xvPCAAAAAJ:UebtZRa9Y70C": {
+      "author_pub_id": "g9xvPCAAAAAJ:UebtZRa9Y70C",
+      "bib": {
+        "title": "Energy efficiency optimization for subterranean LoRaWAN using a reinforcement learning approach: A direct-to-satellite scenario",
+        "author": "K Lin, MA Ullah, H Alves, K Mikhaylov, T Hao",
+        "citation": "IEEE Wireless Communications Letters 13 (2), 308-312 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 24
+    },
+    "g9xvPCAAAAAJ:roLk4NBRz8UC": {
+      "author_pub_id": "g9xvPCAAAAAJ:roLk4NBRz8UC",
+      "bib": {
+        "title": "A feasibility study of LoRaWAN-based wireless underground sensor networks for underground monitoring",
+        "author": "G Zhao, K Lin, T Hao",
+        "citation": "Computer Networks 232, 109851 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 24
+    },
+    "g9xvPCAAAAAJ:Tyk-4Ss8FVUC": {
+      "author_pub_id": "g9xvPCAAAAAJ:Tyk-4Ss8FVUC",
+      "bib": {
+        "title": "Link quality analysis of wireless sensor networks for underground infrastructure monitoring: A non-backfilled scenario",
+        "author": "K Lin, T Hao",
+        "citation": "IEEE sensors Journal 21 (5), 7006-7014 , 2020",
+        "pub_year": "2020"
+      },
+      "num_citations": 24
+    },
+    "g9xvPCAAAAAJ:9yKSN-GCB0IC": {
+      "author_pub_id": "g9xvPCAAAAAJ:9yKSN-GCB0IC",
+      "bib": {
+        "title": "A preliminary study of UG2AG link quality in LoRa-based wireless underground sensor networks",
+        "author": "K Lin, T Hao, Z Yu, W Zheng, W He",
+        "citation": "2019 IEEE 44th Conference on Local Computer Networks (LCN), 51-59 , 2019",
+        "pub_year": "2019"
+      },
+      "num_citations": 22
+    },
+    "g9xvPCAAAAAJ:2osOgNQ5qMEC": {
+      "author_pub_id": "g9xvPCAAAAAJ:2osOgNQ5qMEC",
+      "bib": {
+        "title": "Electrically thin metasurface for broadband transmission enhancement by manipulating the amplitude and phase of the reflection coefficients",
+        "author": "T Hao, W Zheng, W Wang, Y Zhou, J Bai, K Lin, Z Yu",
+        "citation": "Journal of Applied Physics 126 (2) , 2019",
+        "pub_year": "2019"
+      },
+      "num_citations": 19
+    },
+    "g9xvPCAAAAAJ:LkGwnXOMwfcC": {
+      "author_pub_id": "g9xvPCAAAAAJ:LkGwnXOMwfcC",
+      "bib": {
+        "title": "On CSI-free multiantenna schemes for massive wireless-powered underground sensor networks",
+        "author": "K Lin, OLA López, H Alves, T Hao",
+        "citation": "IEEE Internet of Things Journal 10 (19), 17557-17570 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 13
+    },
+    "g9xvPCAAAAAJ:MXK_kJrjxJIC": {
+      "author_pub_id": "g9xvPCAAAAAJ:MXK_kJrjxJIC",
+      "bib": {
+        "title": "Performance analysis of LoRaWAN underground-to-satellite connectivity: An urban underground pipelines monitoring case study",
+        "author": "K Lin, MA Ullah, L Lei, H Alves, K Mikhaylov, T Hao",
+        "citation": "Ad Hoc Networks 169, 103747 , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 11
+    },
+    "g9xvPCAAAAAJ:W7OEmFMy1HYC": {
+      "author_pub_id": "g9xvPCAAAAAJ:W7OEmFMy1HYC",
+      "bib": {
+        "title": "Adaptive selection of transmission configuration for LoRa-based wireless underground sensor networks",
+        "author": "K Lin, T Hao",
+        "citation": "2021 IEEE Wireless Communications and Networking Conference (WCNC), 1-6 , 2021",
+        "pub_year": "2021"
+      },
+      "num_citations": 10
+    },
+    "g9xvPCAAAAAJ:hqOjcs7Dif8C": {
+      "author_pub_id": "g9xvPCAAAAAJ:hqOjcs7Dif8C",
+      "bib": {
+        "title": "Experimental evaluation of UG2AG wireless communication channel for LoRaWAN-based underground infrastructure monitoring",
+        "author": "L Lei, W Zhai, K Lin, N Metje, T Hao",
+        "citation": "2023 9th International Conference on Computer and Communications (ICCC), 914-918 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 9
+    },
+    "g9xvPCAAAAAJ:8k81kl-MbHgC": {
+      "author_pub_id": "g9xvPCAAAAAJ:8k81kl-MbHgC",
+      "bib": {
+        "title": "RIS-aided wireless-powered backscatter communications for sustainable internet of underground things",
+        "author": "K Lin, Y Mao",
+        "citation": "IEEE Internet of Things Magazine 8 (2), 70-76 , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 7
+    },
+    "g9xvPCAAAAAJ:KlAtU1dfN6UC": {
+      "author_pub_id": "g9xvPCAAAAAJ:KlAtU1dfN6UC",
+      "bib": {
+        "title": "Connectivity Analysis of LoRaWAN-Based Non-Terrestrial Networks for Subterranean mMTC",
+        "author": "K Lin, MS Alouini",
+        "citation": "IEEE Internet of Things Journal , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 5
+    },
+    "g9xvPCAAAAAJ:qjMakFHDy7sC": {
+      "author_pub_id": "g9xvPCAAAAAJ:qjMakFHDy7sC",
+      "bib": {
+        "title": "VMD analysis of RF-tagged buried pipes for GPR applications",
+        "author": "W He, T Hao, H Ke, K Lin",
+        "citation": "2019 IEEE Asia-Pacific Microwave Conference (APMC), 560-562 , 2019",
+        "pub_year": "2019"
+      },
+      "num_citations": 3
+    },
+    "g9xvPCAAAAAJ:kNdYIx-mwKoC": {
+      "author_pub_id": "g9xvPCAAAAAJ:kNdYIx-mwKoC",
+      "bib": {
+        "title": "Toward sustainable subterranean mmtc: Space-air-ground-underground networks powered by lorawan and wireless energy transfer",
+        "author": "K Lin, MS Alouini",
+        "citation": "IEEE Wireless Communications , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 2
+    },
+    "g9xvPCAAAAAJ:5nxA0vEk-isC": {
+      "author_pub_id": "g9xvPCAAAAAJ:5nxA0vEk-isC",
+      "bib": {
+        "title": "Suppression of signal distortion within CSI ratio-based wireless sensing by orthogonal antennas",
+        "author": "L Lei, K Lin, T Hao",
+        "citation": "IEEE Sensors Journal 24 (20), 32356-32367 , 2024",
+        "pub_year": "2024"
+      },
+      "num_citations": 2
+    },
+    "g9xvPCAAAAAJ:ULOm3_A8WrAC": {
+      "author_pub_id": "g9xvPCAAAAAJ:ULOm3_A8WrAC",
+      "bib": {
+        "title": "Multi-UAV-Assisted Cooperative Localization of Underground Sensor Nodes Using Multi-Objective Reinforcement Learning",
+        "author": "Z Zhang, K Lin, T Hao",
+        "citation": "IEEE Internet of Things Journal , 2026",
+        "pub_year": "2026"
+      },
+      "num_citations": 1
+    },
+    "g9xvPCAAAAAJ:3fE2CSJIrl8C": {
+      "author_pub_id": "g9xvPCAAAAAJ:3fE2CSJIrl8C",
+      "bib": {
+        "title": "UAV-Enabled Wireless-Powered Underground Communication Networks: A Novel Time Allocation Approach",
+        "author": "K Lin, Y Mao, OLA López, MS Alouini",
+        "citation": "IEEE Transactions on Green Communications and Networking 10, 1618-1632 , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 1
+    },
+    "g9xvPCAAAAAJ:YsMSGLbcyi4C": {
+      "author_pub_id": "g9xvPCAAAAAJ:YsMSGLbcyi4C",
+      "bib": {
+        "title": "A feasibility study of LoRaWAN-based wireless underground sensor networks for underground monitoring applications",
+        "author": "G Zhao, K Lin, T Hao",
+        "citation": "Available at SSRN 4253388 , 2023",
+        "pub_year": "2023"
+      },
+      "num_citations": 1
+    },
+    "g9xvPCAAAAAJ:Zph67rFs4hoC": {
+      "author_pub_id": "g9xvPCAAAAAJ:Zph67rFs4hoC",
+      "bib": {
+        "title": "Deep Reinforcement Learning-Based Cooperative Rate Splitting for Satellite-to-Underground Communication Networks",
+        "author": "K Lin, K Zhao, Y Mao",
+        "citation": "IEEE Transactions on Vehicular Technology , 2026",
+        "pub_year": "2026"
+      },
+      "num_citations": 0
+    },
+    "g9xvPCAAAAAJ:YOwf2qJgpHMC": {
+      "author_pub_id": "g9xvPCAAAAAJ:YOwf2qJgpHMC",
+      "bib": {
+        "title": "Toward Sustainable Internet of Underground Things: a LoRaWAN and Wireless Energy Transfer Integration Approach",
+        "author": "K Lin, MS Alouini",
+        "citation": "MECC 2025, 1-4 , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 0
+    },
+    "g9xvPCAAAAAJ:_kc_bZDykSQC": {
+      "author_pub_id": "g9xvPCAAAAAJ:_kc_bZDykSQC",
+      "bib": {
+        "title": "Connectivity Analysis of LoRaWAN",
+        "author": "K Lin, MS Alouini",
+        "citation": "IEEE Internet of Things Journal , 2025",
+        "pub_year": "2025"
+      },
+      "num_citations": 0
+    }
+  },
+  "updated": "2026-10-07 18:09:40"
+}

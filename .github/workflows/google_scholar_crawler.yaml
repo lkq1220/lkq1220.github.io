@@ -8,12 +8,16 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: google-scholar-stats
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       GOOGLE_SCHOLAR_ID: g9xvPCAAAAAJ
-      SCHOLARLY_TIMEOUT_SECONDS: 240
     steps:
       - uses: actions/checkout@v4
 
@@ -44,9 +48,11 @@ jobs:
         run: python -B -m unittest discover -s google_scholar_crawler -p test_main.py -v
 
       - name: Fetch citation data
+        id: fetch
         run: python google_scholar_crawler/main.py
 
       - name: Publish citation data
+        if: ${{ !cancelled() && steps.fetch.outcome != 'skipped' && steps.fetch.outcome != '' }}
         run: |
           cd google_scholar_crawler/results
           git init
