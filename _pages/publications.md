@@ -17,11 +17,13 @@ sidebar: true
 
 
 # 📑 Journals (Lead)  {#journal-lead}
+1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Terra-Fi: Decoupling Sensing and Wireless Depths for Sustainable Deep Underground Monitoring](https://arxiv.org/abs/2610.33202)," *arXiv preprint arXiv:2610.33202*, 2026.
+
 1. **Kaiqiang Lin**\* and M.-S. Alouini, "Max-Min Throughput in RSMA-Aided SWIPT for Sustainable Internet of Underground Things: A Deep Reinforcement Learning Approach," submitted.
 
-1. **Kaiqiang Lin**, Kangchun Zhao, and Y. Mao\*, "[Deep Reinforcement Learning-Based Cooperative Rate Splitting for Satellite-to-Underground Communication Networks](https://ieeexplore.ieee.org/document/11503457)," *IEEE Transactions on Vehicular Technology*, early access, 2026.
+1. **Kaiqiang Lin**, Kangchun Zhao, and Y. Mao\*, "[Deep Reinforcement Learning-Based Cooperative Rate Splitting for Satellite-to-Underground Communication Networks](https://ieeexplore.ieee.org/document/11503457)," *IEEE Transactions on Vehicular Technology*, vol. 75, no. 9, pp. 21980-21985, Sep. 2026.
 
-1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Enabling Subterranean mMTC: Space-Air-Ground-Underground Networks Powered by LoRaWAN and Wireless Energy Transfer](https://ieeexplore.ieee.org/abstract/document/11263878/)," *IEEE Wireless Communications*, early access, 2025.
+1. **Kaiqiang Lin**\* and M.-S. Alouini, "[Toward Sustainable Subterranean mMTC: Space-Air-Ground-Underground Networks Powered by LoRaWAN and Wireless Energy Transfer](https://ieeexplore.ieee.org/abstract/document/11263878/)," *IEEE Wireless Communications*, vol. 33, no. 4, pp. 137-145, Aug. 2026.
 
 1. **Kaiqiang Lin**, Y. Mao\*, O. L. A. López, and M.-S. Alouini, "[UAV-Enabled Wireless-Powered Underground Communication Networks: A Novel Time Allocation Approach](https://ieeexplore.ieee.org/document/11300317)," *IEEE Transactions on Green Communications and Networking*, vol. 10, pp. 1618-1632, 2026.
 
@@ -76,6 +78,8 @@ sidebar: true
 1. W. He, T. Hao\*, H. Ke, and **Kaiqiang Lin**, "[VMD Analysis of RF-Tagged Buried Pipes for GPR Applications](https://ieeexplore.ieee.org/document/9038427)," *2019 IEEE Asia-Pacific Microwave Conference (APMC)*, Singapore, 2019, pp. 560–562.
 
 # 📌 Patent  {#Patent}
+1. **Kaiqiang Lin** and T. Hao, “Spreading Factor Allocation Method for LoRaWAN-Based Underground Direct-to-Satellite Systems,” Chinese Patent No. ZL202311377712.0, granted Sep. 23, 2026.
+
 1. **Kaiqiang Lin** and T. Hao, “Throughput Optimization Method for Underground Wireless Energy Supply Sensor Network,” Chinese Patent No. ZL20210935556.X, granted Apr. 7, 2023.
 
 1. T. Hao and **Kaiqiang Lin**, “Underground Wireless Sensor Network Node Energy Consumption Optimization Method Based on LoRa,” Chinese Patent No. ZL202011292033.X, granted Nov. 9, 2021.
